@@ -1,13 +1,14 @@
 name: Node Continuous Integration
 
+# triggers
 on:
   pull_request:
     branches: [ master ]
 
-
+# do
 jobs:
   test_pull_request:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # on virtual machine
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
